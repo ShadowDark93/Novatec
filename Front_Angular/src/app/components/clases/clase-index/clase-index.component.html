@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 mt-3">
+            <button class="btn btn-success" routerLink="/clases/create" routerLinkActive="active">Crear clase</button>
+        </div>
+        <div>
+            <div class="row">
+                <h1 class="text-center ">Listado de clases</h1>
+            </div>
+
+            <table class="table table-striped table-bordered ">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Código Estudiante</th>
+                        <th scope="col">Código Profesor</th>
+                        <th scope="col">Nombre Clase</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Operaciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let clase of arrClases">
+                        <th scope="row">{{ clase.id }}</th>
+                        <td>{{ clase.student_id }}</td>
+                        <td>{{ clase.teacher_id}}</td>
+                        <td>{{ clase.nombre_clase }}</td>
+                        <td>{{ clase.estado }}</td>
+                        <td>
+                            <button class="btn btn-warning btn-sm" [routerLink]="['/clases', clase.id]"> Editar</button> |
+                            <button class="btn btn-danger btn-sm" (click)="deleteClass(clase.id)"> Eliminar</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

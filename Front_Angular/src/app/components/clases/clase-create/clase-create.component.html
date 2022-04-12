@@ -1,0 +1,36 @@
+<div class="container">
+    <h1 class="text-center mt-3">Crear Profesor</h1>
+    <form action="" class="mt-3">
+        <div class="form-group mt-3">
+            <label for="documento">Digite el numero de documento</label>
+            <select class="form-select form-select-lg mb-3" id="estado" name="estado" [(ngModel)]="newClass.estado">
+              <option selected value="1">Activo</option>
+              <option value="0">Inactivo</option>
+            </select>
+        </div>
+        <div class="form-group mt-3">
+            <label for="nombres">Digite los nombres del profesor</label>
+            <select class="form-select form-select-lg mb-3" id="estado" name="estado" [(ngModel)]="newClass.estado">
+              <option selected value="1">Activo</option>
+              <option value="0">Inactivo</option>
+            </select>
+        </div>
+        <div class="form-group mt-3 ">
+            <label for="Apellidos ">Digite los apellidos del profesor</label>
+            <input type="text" class="form-control" id="apellidos" name="apellidos" [(ngModel)]="newClass.nombre_clase" placeholder=" Digite los apellidos">
+        </div>
+        <div class="form-group mt-3 ">
+            <label for="exampleInputEmail1 ">Seleccione el estado</label>
+            <select class="form-select form-select-lg mb-3" id="estado" name="estado" [(ngModel)]="newClass.estado">
+              <option selected value="1">Activo</option>
+              <option value="0">Inactivo</option>
+            </select>
+        </div>
+
+        <div class="col mt-3 ">
+            <button class="btn btn-warning " routerLink="/students " routerLinkActive="active ">Volver</button> |
+            <button type="submit " class="btn btn-success" (click)="addClass()">Guardar</button>
+        </div>
+
+    </form>
+</div>
